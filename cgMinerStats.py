@@ -121,20 +121,20 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     #Write System Infos
     draw.text((x, top), DateTime, font=font, fill=255)
-    draw.text((x, top+10),  "IP: " + str(IP,'utf-8'), font=font, fill=255)
-    draw.text((x, top+20), str(CPU,'utf-8') + " " + str(temp,'utf-8') , font=font, fill=255)
-    draw.text((x, top+30), str(MemUsage,'utf-8'), font=font, fill=255)
+    draw.text((x, top+8),  "IP: " + str(IP,'utf-8'), font=font, fill=255)
+    draw.text((x, top+16), str(CPU,'utf-8') + " " + str(temp,'utf-8') , font=font, fill=255)
+    draw.text((x, top+25), str(MemUsage,'utf-8'), font=font, fill=255)
 
     #Write BTC Infos
     if withImage:
-        draw.bitmap((x, top+45), btcLogo, fill=1)
-        draw.text((x+25, top+40), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
-        draw.text((x+25, top+50), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
-        draw.text((x+25, top+60), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
+        draw.bitmap((x, top+41), btcLogo, fill=1)
+        draw.text((x+25, top+38), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
+        draw.text((x+25, top+47), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
+        draw.text((x+25, top+56), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
     else: #if btcLogo is not available
-        draw.text((x, top+40), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
-        draw.text((x, top+50), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
-        draw.text((x, top+60), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
+        draw.text((x, top+38), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
+        draw.text((x, top+47), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
+        draw.text((x, top+56), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
 
     disp.image(image)
     disp.show()
