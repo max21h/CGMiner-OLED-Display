@@ -44,7 +44,18 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
       python3 cgMinerStats.py
     Option 2 (Background):
       nohup python3 cgMinerStats.py &
-  
+      
+  ## Default Output
+    # System Infos
+    - Date and Time (local machine)
+    - IP Adress
+    - CPU Load and Temp
+    - Memory Usage
+    
+    # CGMiner API (check wiki to set other data)
+    - GH/s av (average GH/s)
+    - Best (Best Share)
+    - BLK (Found Blocks)
   ![example](https://user-images.githubusercontent.com/116381805/198964891-1662f4e6-c638-4b19-9baa-a0cec491e8a3.png)
   
 
