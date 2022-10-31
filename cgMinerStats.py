@@ -8,6 +8,7 @@ from board import SCL, SDA
 import busio
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
+from time import strftime
 
 class CgminerAPI(object):
     """ Cgminer RPC API wrapper. """
@@ -104,6 +105,7 @@ except:
 
 while True:
     # Get System Infos
+    DateTime = strftime("%d.%m.%Y %H:%M:%S")
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd, shell = True)
     cmd = "top -bn1 | grep load | awk '{printf \"CPU Load: %.2f\", $(NF-2)}'"
@@ -118,20 +120,21 @@ while True:
     summary = cgminer.summary()
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     #Write System Infos
-    draw.text((x, top),  "IP: " + str(IP,'utf-8'), font=font, fill=255)
-    draw.text((x, top+8), str(CPU,'utf-8') + " " + str(temp,'utf-8') , font=font, fill=255)
-    draw.text((x, top+16), str(MemUsage,'utf-8'), font=font, fill=255)
+    draw.text((x, top), DateTime, font=font, fill=255)
+    draw.text((x, top+10),  "IP: " + str(IP,'utf-8'), font=font, fill=255)
+    draw.text((x, top+20), str(CPU,'utf-8') + " " + str(temp,'utf-8') , font=font, fill=255)
+    draw.text((x, top+30), str(MemUsage,'utf-8'), font=font, fill=255)
 
     #Write BTC Infos
     if withImage:
-        draw.bitmap((x, top+40), btcLogo, fill=1)
-        draw.text((x+25, top+35), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
-        draw.text((x+25, top+45), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
-        draw.text((x+25, top+55), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
+        draw.bitmap((x, top+45), btcLogo, fill=1)
+        draw.text((x+25, top+40), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
+        draw.text((x+25, top+50), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
+        draw.text((x+25, top+60), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
     else: #if btcLogo is not available
-        draw.text((x, top+35), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
-        draw.text((x, top+45), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
-        draw.text((x, top+55), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
+        draw.text((x, top+40), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
+        draw.text((x, top+50), "BEST: " + str(summary['SUMMARY'][0]['Best Share']), font=font, fill=255)
+        draw.text((x, top+60), "BLK: " + str(summary['SUMMARY'][0]['Found Blocks']), font=font, fill=255)
 
     disp.image(image)
     disp.show()
