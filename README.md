@@ -24,7 +24,7 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
     sudo apt install -y python3-setuptools
     sudo apt install -y python3-rpi.gpio
     sudo apt install -y i2c-tools
-    sudo pip3 install adafruit-circuitpython-ssd1306 (for RaspberryPi 4)
+    sudo pip3 install adafruit-circuitpython-ssd1306
    ### Connect display
     Ground: PIN6
     VCC:    PIN1
