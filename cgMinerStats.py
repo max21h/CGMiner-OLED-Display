@@ -3,6 +3,7 @@ import json
 import sys
 import time
 import subprocess
+import os
 
 from board import SCL, SDA
 import busio
@@ -97,6 +98,7 @@ font = ImageFont.load_default()
 cgminer = CgminerAPI()
 
 #Load Image
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 withImage = True
 try:
     btcLogo = Image.open('btc_logo.png').resize((20, 25), Image.ANTIALIAS)
