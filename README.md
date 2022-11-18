@@ -5,6 +5,7 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
 ## Requirements
   - Raspberry Pi
   - [0,96 Zoll OLED Display I2C](https://www.amazon.de/dp/B01L9GC470/)
+  - [Jumper Wire/Kabel](https://www.amazon.de/dp/B07KYHBVR7/)
 ## Software Requirements
   ### Update Raspbian
     sudo apt-get update
