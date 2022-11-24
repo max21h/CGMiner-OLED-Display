@@ -45,7 +45,13 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
       python3 cgMinerStats.py
     Option 2 (Background):
       nohup python3 cgMinerStats.py &
-      
+ ## Autostart with rc.local
+    Open rc.local
+      sudo nano /etc/rc.local
+    Add line to r.local
+      sudo nohup python3 /yourPath/CGMiner-OLED-Display/cgMinerStats.py &
+  ![rc local](https://user-images.githubusercontent.com/116381805/203770650-6f73edcf-cf39-47b1-b236-5b9cf214e70f.png)
+    
   ## Default Output
     # System Infos
     - Date and Time (local machine)
