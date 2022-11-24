@@ -63,7 +63,7 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
     - GH/s av (average GH/s)
     - Best (Best Share)
     - BLK (Found Blocks)
-  ![example](https://user-images.githubusercontent.com/116381805/198964891-1662f4e6-c638-4b19-9baa-a0cec491e8a3.png)
+  ![oled_display](https://user-images.githubusercontent.com/116381805/203777160-d7d1c403-b89e-495e-8e95-08e60653e07a.png)
   
 
 ### Donate
