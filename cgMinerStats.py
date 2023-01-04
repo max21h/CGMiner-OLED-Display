@@ -176,14 +176,15 @@ while True:
     draw.text((x, top+16), str(CPU,'utf-8') + "  " + str(temp,'utf-8') , font=font, fill=255)
     draw.text((x, top+25), MemUsage, font=font, fill=255)
 
+    y = 0
+    if(withImage):
+        y = 25
     # Write CGMiner Stats   
     if doCGMinerAPI:     
         try:
             summary = cgminer.summary()
 
-            y = 0
             if(withImage):
-                y = 25
                 draw.bitmap((x, top+41), btcLogo, fill=1)
 
             draw.text((x+y, top+38), "GH/s av: " + '%.2f' % (summary['SUMMARY'][0]['MHS av'] / 1000), font=font, fill=255)
@@ -206,9 +207,7 @@ while True:
                     t = Thread(target=getCKPoolData, args=(url, bcAdress, workerName, hrOption, draw))
                     t.start()
             
-            y = 0
             if(withImage):
-                y = 25
                 draw.bitmap((x, top+41), btcLogo, fill=1)
 
             draw.text((x+y, top+38), "HR " + hrOption + ": " + line1.replace("T", " T").replace("G", " G").replace("M", " M"), font=font, fill=255)
