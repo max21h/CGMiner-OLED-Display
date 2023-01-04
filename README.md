@@ -72,7 +72,8 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
     - [hashrate Option] = which hashrate you want to display (e.g. 1m = hashrate1m; 7d = hashrate7d)
     - [workername] = Data of a specific worker will be shown (without this parameter the summary of your given adress will be shown)
 
-    for example: python3 cgMinerStats.py bc1qr0qr3mjlsav66a0twq7qpkrqmc4vwh7mdsXXXXX 5m myUSBMiner
+    for example: python3 cgMinerStats.py bc1qr0qr3mjlsav66a0twq7qpkrqmc4vwh7mdsXXXXX 5m max21H
+  ![ckpool_output](https://user-images.githubusercontent.com/116381805/210548055-5c5ca8cc-7bfc-4ca8-a862-87898a6346b0.jpg)
   
 ### Donate
 <img width="573" alt="image" src="https://user-images.githubusercontent.com/116381805/197489090-9f5e78f4-6c32-43b0-b544-67ccea1c12f3.png">
