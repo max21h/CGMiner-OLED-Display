@@ -65,7 +65,15 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
     - BLK (Found Blocks)
   ![oled_display](https://user-images.githubusercontent.com/116381805/203777160-d7d1c403-b89e-495e-8e95-08e60653e07a.png)
   
+  ## Paramters for CKPool Output
+    python3 cgMinerStats.py [BTC-Adress] [hashrate Option] [workername]
+      
+    - [bc-Adress] = Your BTC-Adress from CKPool Website (e.g https://solo.ckpool.org/users/bc1qr0qr3mjlsav66a0twq7qpkr....)
+    - [hashrate Option] = which hashrate you want to display (e.g. 1m = hashrate1m; 7d = hashrate7d)
+    - [workername] = Data of a specific worker will be shown (without this parameter the summary of your given adress will be shown)
 
+    for example: python3 cgMinerStats.py bc1qr0qr3mjlsav66a0twq7qpkrqmc4vwh7mdsXXXXX 5m myUSBMiner
+  
 ### Donate
 <img width="573" alt="image" src="https://user-images.githubusercontent.com/116381805/197489090-9f5e78f4-6c32-43b0-b544-67ccea1c12f3.png">
 
