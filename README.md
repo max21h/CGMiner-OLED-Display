@@ -76,5 +76,6 @@ The cgminer data is fetched via CG-Miner API, add --api-listen to your sudo ./cg
   ![ckpool_output](https://user-images.githubusercontent.com/116381805/210548055-5c5ca8cc-7bfc-4ca8-a862-87898a6346b0.jpg)
   
 ### Donate
-<img width="573" alt="image" src="https://user-images.githubusercontent.com/116381805/197489090-9f5e78f4-6c32-43b0-b544-67ccea1c12f3.png">
+![lnurl](https://user-images.githubusercontent.com/116381805/212836865-b4da6e48-48c9-4efd-9ef1-ccd656a38a28.png)
+LNURL1DP68GURN8GHJ7MRW9E6XJURN9UH8WETVDSKKKMN0WAHZ7MRWW4EXCUP0X9URVEPHVSCNSVPEXS6R2ETRXE3X2YS85U9
 
